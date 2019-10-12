@@ -69,9 +69,6 @@ module.exports = options => {
   if (!options.url) {
     options.url = 'https://test.svarut.ks.no'
   }
-  if (!options.urlPath) {
-    options.urlPath = '/tjenester/api/forsendelse/v1/'
-  }
 
   svarutInstance = axios.create({
     baseURL: options.url,
