@@ -58,13 +58,13 @@ const sendForsendelse = async forsendelse => {
 
 module.exports = options => {
   if (!options) {
-    throw Error('Missing options')
+    throw TypeError('Missing options')
   }
   if (!options.username) {
-    throw Error('Missing options.username')
+    throw TypeError('Missing options.username')
   }
   if (!options.password) {
-    throw Error('Missing options.password')
+    throw TypeError('Missing options.password')
   }
   if (!options.url) {
     options.url = 'https://test.svarut.ks.no'
