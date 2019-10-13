@@ -67,21 +67,3 @@ typings/
 
 # next.js build output
 .next
-
-# Local
-pifu.xml
-pifu.json
-groups.json
-persons.json
-students.json
-teachers.json
-basisgrupper.json
-undervisningsgrupper.json
-faggrupper.json
-memberships.json
-merged-groups.json
-skoler.json
-skoleeier.json
-kontaktlarergrupper.json
-usernames.json
-vigobasUsers.json

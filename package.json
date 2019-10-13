@@ -1,13 +1,17 @@
 {
-  "name": "svarut",
+  "name": "@alheimsins/svarut",
   "version": "1.0.0",
   "description": "Node module for SvarUts REST API",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "src/index.js",
   "files": [
     "src/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "standard && npm audit && ava",
+    "test:offline": "standard && ava"
   },
   "keywords": [
     "svarut"
@@ -17,10 +21,21 @@
     "email": "jonas.enge@gmail.com",
     "url": "https://github.com/maccyber"
   },
+  "contributors": [
+    {
+      "name": "Geir Gåsodden",
+      "email": "geir.gasodden@pythonia.no",
+      "url": "https://github.com/zrrrzzt"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "ajv": "6.10.2",
     "axios": "0.19.0",
     "form-data": "2.5.1"
+  },
+  "devDependencies": {
+    "ava": "2.4.0",
+    "standard": "14.3.1"
   }
 }
