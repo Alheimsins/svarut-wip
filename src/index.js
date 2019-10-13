@@ -1,7 +1,7 @@
 const Ajv = require('ajv')
 const axios = require('axios')
 const FormData = require('form-data')
-const fs = require('fs')
+const { createReadStream, existsSync, statSync } = require('fs')
 const forsendelseSchema = require('./schemas/forsendelse.json')
 
 const SVARUT_API_URL_PATH = '/tjenester/api/forsendelse/v1/'
@@ -36,8 +36,8 @@ const sendForsendelse = async forsendelse => {
     forsendelse.dokumenter
       .filter(({ filePath }) => filePath)
       .forEach(document => {
-        if (fs.existsSync(document.filePath)) {
-          form.append('filer', fs.createReadStream(document.filePath), { knownLength: fs.statSync(document.filePath).size })
+        if (existsSync(document.filePath)) {
+          form.append('filer', createReadStream(document.filePath), { knownLength: statSync(document.filePath).size })
         } else {
           throw Error(`File ${document.filePath} does not exist`)
         }
