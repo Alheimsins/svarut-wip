@@ -30,7 +30,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "ajv": "6.12.4",
+    "ajv": "6.12.5",
     "axios": "0.20.0",
     "form-data": "3.0.0"
   },
