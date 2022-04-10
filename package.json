@@ -35,7 +35,7 @@
     "form-data": "4.0.0"
   },
   "devDependencies": {
-    "ava": "4.0.1",
+    "ava": "4.2.0",
     "standard": "16.0.4"
   }
 }
